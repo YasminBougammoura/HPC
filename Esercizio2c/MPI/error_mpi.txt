@@ -1,0 +1,40 @@
+[thin005:1312146:0:1312146] Caught signal 11 (Segmentation fault: Sent by the kernel at address (nil))
+==== backtrace (tid:1312146) ====
+ 0  /lib64/libucs.so.0(ucs_handle_error+0x2e4) [0x7fc3e1ef6144]
+ 1  /lib64/libucs.so.0(+0x2880d) [0x7fc3e1ef780d]
+ 2  /lib64/libucs.so.0(+0x289dd) [0x7fc3e1ef79dd]
+ 3  /lib64/libucp.so.0(ucp_ep_close_nbx+0x27) [0x7fc3e1fad047]
+ 4  /lib64/libucp.so.0(ucp_ep_close_nb+0x49) [0x7fc3e1fad369]
+ 5  /opt/programs/openMPI/4.1.6/lib/libmca_common_ucx.so.40(opal_common_ucx_del_procs_nofence+0xd2) [0x7fc3e204e052]
+ 6  /opt/programs/openMPI/4.1.6/lib/libmca_common_ucx.so.40(opal_common_ucx_del_procs+0x9) [0x7fc3e204e109]
+ 7  /opt/programs/openMPI/4.1.6/lib/openmpi/mca_pml_ucx.so(mca_pml_ucx_del_procs+0xc1) [0x7fc3e2055851]
+ 8  /opt/programs/openMPI/4.1.6/lib/libmpi.so.40(ompi_mpi_finalize+0x5a7) [0x7fc3e92b9f67]
+ 9  ./MPI_scaling() [0x401a2f]
+10  /lib64/libc.so.6(+0x2a088) [0x7fc3e904a088]
+11  /lib64/libc.so.6(__libc_start_main+0x8b) [0x7fc3e904a14b]
+12  ./MPI_scaling() [0x4011e5]
+=================================
+[thin005:1312146] *** Process received signal ***
+[thin005:1312146] Signal: Segmentation fault (11)
+[thin005:1312146] Signal code:  (-6)
+[thin005:1312146] Failing at address: 0x99cf2200140592
+[thin005:1312146] [ 0] /lib64/libc.so.6(+0x40d00)[0x7fc3e9060d00]
+[thin005:1312146] [ 1] /lib64/libucp.so.0(ucp_ep_close_nbx+0x27)[0x7fc3e1fad047]
+[thin005:1312146] [ 2] /lib64/libucp.so.0(ucp_ep_close_nb+0x49)[0x7fc3e1fad369]
+[thin005:1312146] [ 3] /opt/programs/openMPI/4.1.6/lib/libmca_common_ucx.so.40(opal_common_ucx_del_procs_nofence+0xd2)[0x7fc3e204e052]
+[thin005:1312146] [ 4] /opt/programs/openMPI/4.1.6/lib/libmca_common_ucx.so.40(opal_common_ucx_del_procs+0x9)[0x7fc3e204e109]
+[thin005:1312146] [ 5] /opt/programs/openMPI/4.1.6/lib/openmpi/mca_pml_ucx.so(mca_pml_ucx_del_procs+0xc1)[0x7fc3e2055851]
+[thin005:1312146] [ 6] /opt/programs/openMPI/4.1.6/lib/libmpi.so.40(ompi_mpi_finalize+0x5a7)[0x7fc3e92b9f67]
+[thin005:1312146] [ 7] ./MPI_scaling[0x401a2f]
+[thin005:1312146] [ 8] /lib64/libc.so.6(+0x2a088)[0x7fc3e904a088]
+[thin005:1312146] [ 9] /lib64/libc.so.6(__libc_start_main+0x8b)[0x7fc3e904a14b]
+[thin005:1312146] [10] ./MPI_scaling[0x4011e5]
+[thin005:1312146] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 1312146 on node thin005 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
+slurmstepd: error: *** JOB 867918 ON thin005 CANCELLED AT 2024-11-03T11:16:33 DUE TO TIME LIMIT ***
