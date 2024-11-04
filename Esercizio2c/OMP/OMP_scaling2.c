@@ -41,43 +41,58 @@ int mandelbrot(double complex c, int max_iter){
 void *generate_gradient(int xsize, int ysize, int start_row, int end_row, double complex c_L, double complex c_R, int max_iter){
     
     size_t image_size = (max_iter < 256) ? sizeof(char) : sizeof(short int);
-    void *Image = malloc((end_row - start_row) * xsize * image_size);
-    
+    void *pixel = malloc((end_row - start_row)* xsize * image_size);
+
     const double x_l = creal(c_L), x_r = creal(c_R);
     const double y_l = cimag(c_L), y_r = cimag(c_R);
-    
+
     const double register delta_x = (x_r - x_l) / xsize;
     const double register delta_y = (y_r - y_l) / ysize;
 
-    int yy, xx;
+    //int yy, xx;
 
-    #pragma omp parallel for schedule(dynamic) shared(Image) private(yy,xx)
-    for (int yy = start_row; yy < end_row; yy++){
+    //omp_set_num_threads(2);
+    #pragma omp parallel
+    {
+        int myid = omp_get_thread_num();
+        int total_threads = omp_get_num_threads();
 
-        double imag = y_l + yy * delta_y;
+        //if (myid == 0) printf("Number of threads: %d\n", total_threads);
+        //printf("My id is: %d\n", myid);
         
-        for (int xx = 0; xx < xsize; xx++){
-            
-            double real = x_l + xx * delta_x;
-            
-            double complex c = real + imag * I;
-            
-            int iter = mandelbrot(c, max_iter);
+        int sizet = (end_row - start_row)/total_threads;
+        int remt = (end_row - start_row)%total_threads;
 
-            int idx = (yy - start_row)* xsize + xx;
-            
-            if (max_iter < 256){
-                ((char*)Image)[idx] = (char)(iter);
-            } else {
-                ((short int*)Image)[idx] = (short int)(iter);
+        int mystart = start_row + myid * sizet + ((myid < remt) ? myid : remt);
+        int myend = mystart + sizet + (myid < remt ? 1 : 0);
+
+        //#pragma omp parallel for schedule(dynamic) shared(pixel) private(yy,xx)
+        for (int yy = mystart; yy < myend; yy++ ){
+
+            double imag = y_l + yy * delta_y;
+
+            for (int xx = 0; xx < xsize; xx++){
+
+                double real = x_l + xx * delta_x;
+
+                double complex c = real + imag * I;
+
+                int iter = mandelbrot(c, max_iter);
+
+                int idx = (yy - start_row)* xsize + xx;
+
+                if (max_iter < 256){
+                    ((char*)pixel)[idx] = (char)(iter);
+                } else {
+                   ((short int*)pixel)[idx] = (short int)(iter); 
+                }
             }
         }       
-    }
-    return Image;
-}
 
-//mpicc -fopenmp OMP_scaling0.c -o OMP_scaling0 -lm -O3
-//mpirun -np 1 ./OMP_scaling0 512 512 -2 -1.5 1.0 1.5 1024
+    }
+
+    return pixel;
+}
 
 int main(int argc, char **argv){
     
@@ -95,6 +110,8 @@ int main(int argc, char **argv){
     MPI_Comm_size(MPI_COMM_WORLD, &size);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
+    //printf("Process ID: %d of %d total processes\n", rank, size);
+
     // Input arguments reading
     double real_xl = atof(argv[3]);
     double real_yl = atof(argv[4]);
@@ -110,7 +127,7 @@ int main(int argc, char **argv){
     const double complex c_R = real_xr + (real_yr * I);
 
     int num_threads = omp_get_max_threads();
-
+ 
     double start_time;
     if (rank == 0) start_time = MPI_Wtime();
 
@@ -165,12 +182,12 @@ int main(int argc, char **argv){
         write_pgm_image(final_image, max_iter, xsize, ysize, "mandelbrot1.pgm");
         free(final_image); // Free final image memory
 
-        clock_t end_time = MPI_Wtime();
-        double elapsed_time = (double)(end_time - start_time);
+        double end_time = MPI_Wtime();
+        double elapsed_time = (double)(end_time - start_time); // / CLOCKS_PER_SEC;
 
-        FILE *time_results_OMP = fopen("OMP_scaling0.csv", "a");
+        FILE *time_results_OMP = fopen("OMP_scaling2.csv", "a");
         if (time_results_OMP != NULL){
-            fprintf(time_results_OMP, "%d, %.6f\n", num_threads, elapsed_time);
+            fprintf(time_results_OMP, "%d, %.2f\n", num_threads, elapsed_time);
             fclose(time_results_OMP);
         } else {
             perror("Error opening file");
@@ -187,4 +204,3 @@ int main(int argc, char **argv){
     MPI_Finalize();
     return 0;
 }
-    

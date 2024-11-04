@@ -41,7 +41,7 @@ int mandelbrot(double complex c, int max_iter){
 void *generate_gradient(int xsize, int ysize, int start_row, int end_row, double complex c_L, double complex c_R, int max_iter){
     
     size_t image_size = (max_iter < 256) ? sizeof(char) : sizeof(short int);
-    void *Image = malloc((end_row - start_row)* xsize * image_size);
+    void *pixel = malloc((end_row - start_row)* xsize * image_size);
 
     const double x_l = creal(c_L), x_r = creal(c_R);
     const double y_l = cimag(c_L), y_r = cimag(c_R);
@@ -56,7 +56,7 @@ void *generate_gradient(int xsize, int ysize, int start_row, int end_row, double
         int myid = omp_get_thread_num();
         int total_threads = omp_get_num_threads();
         
-        //printf("Number of threads: %d\n", total_threads);
+        //if (myid == 0) printf("Number of threads: %d\n", total_threads);
         //printf("My id is: %d\n", myid);
         
         int sizet = (end_row - start_row)/total_threads;
@@ -65,7 +65,7 @@ void *generate_gradient(int xsize, int ysize, int start_row, int end_row, double
         int mystart = start_row + myid * sizet + (myid < remt ? myid : remt);
         int myend = mystart + sizet + (myid < remt ? 1 : 0);
 
-        #pragma omp parallel for schedule(dynamic) shared(Image) private(yy,xx)
+        #pragma omp parallel for schedule(dynamic) shared(pixel) private(yy,xx)
         for (int yy = mystart; yy < myend; yy++ ){
 
             double imag = y_l + yy * delta_y;
@@ -81,16 +81,16 @@ void *generate_gradient(int xsize, int ysize, int start_row, int end_row, double
                 int idx = (yy - start_row)* xsize + xx;
 
                 if (max_iter < 256){
-                    ((char*)Image)[idx] = (char)(iter);
+                    ((char*)pixel)[idx] = (char)(iter);
                 } else {
-                   ((short int*)Image)[idx] = (short int)(iter); 
+                   ((short int*)pixel)[idx] = (short int)(iter); 
                 }
             }
         }       
 
     }
 
-    return Image;
+    return pixel;
 }
 
 //mpicc -fopenmp OMP_scaling1.c -o OMP_scaling1 -lm -O3
@@ -132,13 +132,7 @@ int main(int argc, char **argv){
     int num_threads = omp_get_max_threads();
     
     clock_t start_time;
-    if (rank == 0) {
-	    
-	    start_time = clock();
-          
-	    //omp_set_num_threads(num_threads);
-        
-   }
+    if (rank == 0) start_time = clock();
 
    // Each process calculates the number of rows it will handle
    const int rows_per_P = ysize / size;

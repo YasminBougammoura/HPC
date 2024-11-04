@@ -41,7 +41,7 @@ int mandelbrot(double complex c, int max_iter){
 void *generate_gradient(int xsize, int ysize, int start_row, int end_row, double complex c_L, double complex c_R, int max_iter){
     
     size_t image_size = (max_iter < 256) ? sizeof(char) : sizeof(short int);
-    void *Image = malloc((end_row - start_row)* xsize * image_size);
+    void *pixel = malloc((end_row - start_row)* xsize * image_size);
 
     const double x_l = creal(c_L), x_r = creal(c_R);
     const double y_l = cimag(c_L), y_r = cimag(c_R);
@@ -51,13 +51,13 @@ void *generate_gradient(int xsize, int ysize, int start_row, int end_row, double
 
     int yy, xx;
 
-    omp_set_num_threads(1);
-    #pragma omp parallel 
+    //omp_set_num_threads(2);
+    #pragma omp parallel
     {
         int myid = omp_get_thread_num();
         int total_threads = omp_get_num_threads();
 
-        //printf("Number of threads: %d\n", total_threads);
+        //if (myid == 0) printf("Number of threads: %d\n", total_threads);
         //printf("My id is: %d\n", myid);
         
         int sizet = (end_row - start_row)/total_threads;
@@ -66,7 +66,7 @@ void *generate_gradient(int xsize, int ysize, int start_row, int end_row, double
         int mystart = start_row + myid * sizet + ((myid < remt) ? myid : remt);
         int myend = mystart + sizet + (myid < remt ? 1 : 0);
 
-        #pragma omp parallel for schedule(dynamic) shared(Image) private(yy,xx)
+        #pragma omp parallel for schedule(dynamic) shared(pixel) private(yy,xx)
         for (int yy = mystart; yy < myend; yy++ ){
 
             double imag = y_l + yy * delta_y;
@@ -82,16 +82,16 @@ void *generate_gradient(int xsize, int ysize, int start_row, int end_row, double
                 int idx = (yy - start_row)* xsize + xx;
 
                 if (max_iter < 256){
-                    ((char*)Image)[idx] = (char)(iter);
+                    ((char*)pixel)[idx] = (char)(iter);
                 } else {
-                   ((short int*)Image)[idx] = (short int)(iter); 
+                   ((short int*)pixel)[idx] = (short int)(iter); 
                 }
             }
         }       
 
     }
 
-    return Image;
+    return pixel;
 }
 
 int main(int argc, char **argv){
@@ -150,19 +150,19 @@ int main(int argc, char **argv){
         recv_counts = malloc(size * sizeof(int));
         offset = malloc(size * sizeof(int));
 
-        for (int i = 0; i < size; i+=3){
+        for (int i = 0; i < size; i++){
             
             int rows_per_proc0 = ysize / size + (i < rem ? 1 : 0);
-            int rows_per_proc1 = ysize / size + ((i+1) < rem ? 1 : 0);
-            int rows_per_proc2 = ysize / size + ((i+2) < rem ? 1 : 0);
+            //int rows_per_proc1 = ysize / size + ((i+1) < rem ? 1 : 0);
+            //int rows_per_proc2 = ysize / size + ((i+2) < rem ? 1 : 0);
 
             recv_counts[i] = rows_per_proc0 * xsize * ((max_iter < 256) ? sizeof(char) : sizeof(short int));
-            recv_counts[i+1] = rows_per_proc1 * xsize * ((max_iter < 256) ? sizeof(char) : sizeof(short int));
-            recv_counts[i+2] = rows_per_proc2 * xsize * ((max_iter < 256) ? sizeof(char) : sizeof(short int));
+            //recv_counts[i+1] = rows_per_proc1 * xsize * ((max_iter < 256) ? sizeof(char) : sizeof(short int));
+            //recv_counts[i+2] = rows_per_proc2 * xsize * ((max_iter < 256) ? sizeof(char) : sizeof(short int));
 
             offset[i] = (i * rows_per_P + ((i < rem) ? i : rem)) * xsize * ((max_iter < 256) ? sizeof(char) : sizeof(short int));
-            offset[i+1] = ((i+1) * rows_per_P + (((i+1) < rem) ? (i+1) : rem)) * xsize * ((max_iter < 256) ? sizeof(char) : sizeof(short int));
-            offset[i+2] = ((i+2) * rows_per_P + (((i+2) < rem) ? (i+2) : rem)) * xsize * ((max_iter < 256) ? sizeof(char) : sizeof(short int));
+            //offset[i+1] = ((i+1) * rows_per_P + (((i+1) < rem) ? (i+1) : rem)) * xsize * ((max_iter < 256) ? sizeof(char) : sizeof(short int));
+            //offset[i+2] = ((i+2) * rows_per_P + (((i+2) < rem) ? (i+2) : rem)) * xsize * ((max_iter < 256) ? sizeof(char) : sizeof(short int));
 
         }
     }
@@ -192,7 +192,9 @@ int main(int argc, char **argv){
         }
 
         printf("Time: %.2f\n", elapsed_time);
-           
+        
+        
+        
     }
 
     //printf("Image created...\n");
