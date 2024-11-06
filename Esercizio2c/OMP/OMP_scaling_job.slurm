@@ -16,7 +16,7 @@ module load openMPI/4.1.6/gnu/14.2.1
 
 mpicc -fopenmp OMP_scaling2.c -o OMP_scaling -lm -march=native
 
-for threads in $(seq 1 $SLURM_CPUS_PER_TASK); do
+for threads in 1 2 4 6 8 10 12 14 16 18 20 22 24; do
 	
 	echo "Running with $threads threads..."
 	

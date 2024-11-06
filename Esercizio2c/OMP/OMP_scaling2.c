@@ -57,8 +57,8 @@ void *generate_gradient(int xsize, int ysize, int start_row, int end_row, double
         int myid = omp_get_thread_num();
         int total_threads = omp_get_num_threads();
 
-        //if (myid == 0) printf("Number of threads: %d\n", total_threads);
-        //printf("My id is: %d\n", myid);
+        if (myid == 0) printf("Number of threads: %d\n", total_threads);
+        printf("My id is: %d\n", myid);
         
         int sizet = (end_row - start_row)/total_threads;
         int remt = (end_row - start_row)%total_threads;
@@ -66,7 +66,7 @@ void *generate_gradient(int xsize, int ysize, int start_row, int end_row, double
         int mystart = start_row + myid * sizet + ((myid < remt) ? myid : remt);
         int myend = mystart + sizet + (myid < remt ? 1 : 0);
 
-        //#pragma omp parallel for schedule(dynamic) shared(pixel) private(yy,xx)
+	//#pragma omp parallel for schedule(dynamic) shared(pixel)
         for (int yy = mystart; yy < myend; yy++ ){
 
             double imag = y_l + yy * delta_y;
@@ -110,7 +110,7 @@ int main(int argc, char **argv){
     MPI_Comm_size(MPI_COMM_WORLD, &size);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 
-    //printf("Process ID: %d of %d total processes\n", rank, size);
+    printf("Process ID: %d of %d total processes\n", rank, size);
 
     // Input arguments reading
     double real_xl = atof(argv[3]);

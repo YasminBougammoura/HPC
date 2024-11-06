@@ -1,0 +1,462 @@
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_latency
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "1-2"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961128] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961128] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_bw
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "1-2"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961141] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961141] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_latency
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "1,12"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961169] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961169] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_bw
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "1,12"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961185] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961185] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_latency
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "1,22"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961215] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961215] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_bw
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "1,22"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961227] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961227] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_latency
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "1,32"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961258] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961258] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_bw
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "1,32"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961272] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961272] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_latency
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "1,42"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961300] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961300] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_bw
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "1,42"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961323] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961323] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_latency
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "1,52"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961352] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961352] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_bw
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "1,52"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961368] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961368] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_latency
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "11-12"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961397] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961397] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_bw
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "11-12"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961410] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961410] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_latency
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "11,22"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961439] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961439] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_bw
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "11,22"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961452] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961452] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_latency
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "11,32"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961475] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961475] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_bw
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "11,32"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961504] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961504] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_latency
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "11,42"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961534] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961534] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_bw
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "11,42"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961547] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961547] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_latency
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "11,52"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961575] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961575] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_bw
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "11,52"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961592] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961592] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_latency
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "21-22"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961622] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961622] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_bw
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "21-22"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961636] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961636] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_latency
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "21,32"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961664] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961664] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_bw
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "21,32"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961676] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961676] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_latency
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "21,42"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961704] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961704] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_bw
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "21,42"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961717] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961717] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_latency
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "21,52"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961746] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961746] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_bw
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "21,52"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961758] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961758] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_latency
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "31-32"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961785] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961785] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_bw
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "31-32"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961799] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961799] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_latency
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "31,42"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961827] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961827] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_bw
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "31,42"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961840] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961840] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_latency
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "31,52"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961867] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961867] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_bw
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "31,52"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961892] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961892] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_latency
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "41-42"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961920] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961920] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_bw
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "41-42"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961934] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961934] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_latency
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "41,52"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961963] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961963] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_bw
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "41,52"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:961987] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:961987] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_latency
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "51-52"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:962009] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:962009] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+WARNING: Open MPI tried to bind a process but failed.  This is a
+warning only; your job will continue.
+
+  Local host:        epyc001
+  Application name:  ./osu_bw
+  Error message:     hwloc_set_cpubind returned "Error" for bitmap "51-52"
+  Location:          rtc_hwloc.c:387
+--------------------------------------------------------------------------
+[epyc001.hpc:962039] 1 more process has sent help message help-orte-odls-default.txt / not bound
+[epyc001.hpc:962039] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
