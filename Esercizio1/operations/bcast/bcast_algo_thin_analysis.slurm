@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=scatter_algo_analysis
+#SBATCH --job-name=bcast_algo_analysis
 
 #SBATCH --error=error.txt
 
@@ -22,20 +22,19 @@ echo -e "Cores\tMessage Size\tAverage Latency (us)" > $output_file0
 echo -e "Cores\tMessage Size\tAverage Latency (us)" > $output_file1
 echo -e "Cores\tMessage Size\tAverage Latency (us)" > $output_file2
 
-run_scatter() {
+run_bcast() {
     local algorithm=$1
     local output_file=$2
 
     for ntasks in 1 2 4 6 8 10 12 14 16 18 20 22 24; do
-            echo "Running osu_scatter with algorithm $algorithm and ${ntasks} cores..."
+            echo "Running osu_bcast with algorithm $algorithm and ${ntasks} cores..."
 
-            result=$(mpirun -np ${ntasks} --map-by core --mca pml ucx --mca coll_tuned_use_dynamic_rules true --mca coll_tuned_scatter_algorithm $algorithm ./osu_scatter -x 200 -i 5000)
+            result=$(mpirun -np ${ntasks} --map-by core --mca pml ucx --mca coll_tuned_use_dynamic_rules true --mca coll_tuned_bcast_algorithm $algorithm ./osu_bcast -x 200 -i 1000)
 
             echo "$result" | awk -v cores=$ntasks 'NR > 2 {print cores "\t" $1 "\t" $2}' >> $output_file
     done
 }
 
-run_scatter 0 $output_file0
-run_scatter 1 $output_file1
-run_scatter 3 $output_file2
-
+run_bcast 0 $output_file0
+run_bcast 2 $output_file1
+run_bcast 5 $output_file2
