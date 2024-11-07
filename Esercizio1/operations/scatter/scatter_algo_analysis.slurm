@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=scatter_algo_analysis
+#SBATCH --job-name=scatter_algo_analysis_thin
 
 #SBATCH --error=error.txt
 
@@ -18,15 +18,15 @@ analysis_results0="benchmark_0_THIN.txt"
 analysis_results1="benchmark_1_THIN.txt"
 analysis_results2="benchmark_2_THIN.txt"
 
-echo -e "Cores\tMessage Size\tAverage Latency (us)" > $output_file0
-echo -e "Cores\tMessage Size\tAverage Latency (us)" > $output_file1
-echo -e "Cores\tMessage Size\tAverage Latency (us)" > $output_file2
+echo -e "Cores\tMessage Size\tAverage Latency (us)" > $analysis_results0
+echo -e "Cores\tMessage Size\tAverage Latency (us)" > $analysis_results1
+echo -e "Cores\tMessage Size\tAverage Latency (us)" > $analysis_results2
 
 run_scatter() {
     local algorithm=$1
     local output_file=$2
 
-    for ntasks in 1 2 4 6 8 10 12 14 16 18 20 22 24; do
+    for ntasks in 2 4 6 8 10 12 14 16 18 20 22 24; do
             echo "Running osu_scatter with algorithm $algorithm and ${ntasks} cores..."
 
             result=$(mpirun -np ${ntasks} --map-by core --mca pml ucx --mca coll_tuned_use_dynamic_rules true --mca coll_tuned_scatter_algorithm $algorithm ./osu_scatter -x 200 -i 5000)
@@ -35,7 +35,7 @@ run_scatter() {
     done
 }
 
-run_scatter 0 $output_file0
-run_scatter 1 $output_file1
-run_scatter 3 $output_file2
+run_scatter 0 $analysis_results0
+run_scatter 1 $analysis_results1
+run_scatter 3 $analysis_results2
 
