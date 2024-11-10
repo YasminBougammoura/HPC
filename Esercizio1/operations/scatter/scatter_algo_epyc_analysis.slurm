@@ -8,7 +8,7 @@
 
 #SBATCH --partition=EPYC
 #SBATCH --nodes=1
-#SBATCH --nodelist=epyc001
+# #SBATCH --nodelist=epyc001
 #SBATCH --ntasks=128
 #SBATCH --cpus-per-task=1
 
