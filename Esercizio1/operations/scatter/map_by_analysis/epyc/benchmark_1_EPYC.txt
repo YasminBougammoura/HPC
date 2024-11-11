@@ -1,6 +1,4 @@
 Cores	Message Size	Average Latency (us)
-2	#	Datatype:
-2	#	Size
 2	1	0.15
 2	2	0.15
 2	4	0.15
@@ -22,8 +20,6 @@ Cores	Message Size	Average Latency (us)
 2	262144	31.43
 2	524288	68.65
 2	1048576	132.18
-8	#	Datatype:
-8	#	Size
 8	1	0.90
 8	2	0.91
 8	4	0.89
@@ -45,8 +41,6 @@ Cores	Message Size	Average Latency (us)
 8	262144	127.82
 8	524288	325.92
 8	1048576	723.64
-16	#	Datatype:
-16	#	Size
 16	1	1.53
 16	2	1.50
 16	4	1.52
@@ -68,8 +62,6 @@ Cores	Message Size	Average Latency (us)
 16	262144	266.90
 16	524288	558.41
 16	1048576	1248.44
-24	#	Datatype:
-24	#	Size
 24	1	2.31
 24	2	2.30
 24	4	2.31
@@ -91,8 +83,6 @@ Cores	Message Size	Average Latency (us)
 24	262144	390.05
 24	524288	848.05
 24	1048576	1834.99
-32	#	Datatype:
-32	#	Size
 32	1	2.83
 32	2	2.91
 32	4	2.91
@@ -114,8 +104,6 @@ Cores	Message Size	Average Latency (us)
 32	262144	581.29
 32	524288	1214.25
 32	1048576	2484.00
-40	#	Datatype:
-40	#	Size
 40	1	3.56
 40	2	3.83
 40	4	4.13
@@ -137,8 +125,6 @@ Cores	Message Size	Average Latency (us)
 40	262144	717.64
 40	524288	1573.28
 40	1048576	3265.72
-48	#	Datatype:
-48	#	Size
 48	1	4.84
 48	2	4.99
 48	4	5.06
@@ -160,8 +146,6 @@ Cores	Message Size	Average Latency (us)
 48	262144	902.70
 48	524288	1951.18
 48	1048576	4065.28
-56	#	Datatype:
-56	#	Size
 56	1	5.65
 56	2	6.08
 56	4	5.94
@@ -183,8 +167,6 @@ Cores	Message Size	Average Latency (us)
 56	262144	1029.36
 56	524288	2294.38
 56	1048576	4852.59
-64	#	Datatype:
-64	#	Size
 64	1	5.38
 64	2	5.47
 64	4	5.51
@@ -206,8 +188,6 @@ Cores	Message Size	Average Latency (us)
 64	262144	1215.33
 64	524288	2717.94
 64	1048576	5707.59
-72	#	Datatype:
-72	#	Size
 72	1	6.96
 72	2	7.34
 72	4	7.64
@@ -229,8 +209,6 @@ Cores	Message Size	Average Latency (us)
 72	262144	1406.94
 72	524288	4265.21
 72	1048576	10040.51
-80	#	Datatype:
-80	#	Size
 80	1	8.35
 80	2	8.37
 80	4	8.50
@@ -252,8 +230,6 @@ Cores	Message Size	Average Latency (us)
 80	262144	1701.30
 80	524288	5329.62
 80	1048576	15081.19
-88	#	Datatype:
-88	#	Size
 88	1	9.91
 88	2	10.44
 88	4	10.69
@@ -275,8 +251,6 @@ Cores	Message Size	Average Latency (us)
 88	262144	2161.14
 88	524288	5665.89
 88	1048576	15950.18
-96	#	Datatype:
-96	#	Size
 96	1	10.75
 96	2	11.32
 96	4	11.68
@@ -298,8 +272,6 @@ Cores	Message Size	Average Latency (us)
 96	262144	3189.54
 96	524288	7999.18
 96	1048576	23313.01
-104	#	Datatype:
-104	#	Size
 104	1	12.06
 104	2	12.88
 104	4	13.20
@@ -321,8 +293,6 @@ Cores	Message Size	Average Latency (us)
 104	262144	3695.84
 104	524288	10846.70
 104	1048576	17901.59
-112	#	Datatype:
-112	#	Size
 112	1	13.40
 112	2	13.94
 112	4	14.04
@@ -344,8 +314,6 @@ Cores	Message Size	Average Latency (us)
 112	262144	4093.15
 112	524288	11683.71
 112	1048576	14058.01
-120	#	Datatype:
-120	#	Size
 120	1	14.16
 120	2	14.83
 120	4	15.51
@@ -367,8 +335,6 @@ Cores	Message Size	Average Latency (us)
 120	262144	4556.02
 120	524288	7997.12
 120	1048576	15166.29
-128	#	Datatype:
-128	#	Size
 128	1	14.86
 128	2	16.02
 128	4	15.94
